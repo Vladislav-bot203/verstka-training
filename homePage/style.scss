@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url("../assets/fonts/Montserrat-Regular.ttf");
@@ -18,7 +19,7 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 130%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
@@ -29,16 +30,50 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 100%;
-  letter-spacing: 5%;
+  letter-spacing: 0.05em;
 }
 
 @mixin MontserratHD1() {
-    font-family: "Montserrat";
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 150%;
-    letter-spacing: 5.76px;
-    text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@mixin MontserratHD2() {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@mixin Paragraph() {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 148%;
+}
+
+@mixin MontserratHD4() {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@mixin MontserratHD3() {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600px;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 body {
@@ -73,7 +108,7 @@ body {
     .header__logo__link {
       @include MontserratAS();
       margin-left: 8px;
-      
+
       a {
         text-decoration: none;
         color: black;
@@ -125,20 +160,202 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     .hero__container__wishes {
-        @include Allura();
-        color: white;
-      }
+      @include Allura();
+      color: white;
+      width: 100%;
+      text-align: center;
+    }
+
+    .top {
+      margin-top: 19%
+    }
 
     .hero__container__heading {
-        @include MontserratHD1();
-        text-align: center;
+      @include MontserratHD1();
+      text-align: center;
+      color: white;
+      margin-top: 1%;
+    }
+
+    .hero__container__btn {
+      padding: 20px 32px;
+      border-radius: 20px;
+      background-color: #181C29;
+      border: transparent;
+      margin-top: 0.5%;
+      margin-bottom: 1%;
+
+      &:hover,
+      &:hover .hero__container__link {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+
+      .hero__container__link {
+        @include MontserratAS();
         color: white;
-        margin-bottom: 20%;
+      }
     }
   }
 }
 
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  background-color: #ff4646;
+  background-image: url(../assets/images/snow.png);
+  background-size: 100% 100%;
 
+
+  .about__container {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+
+    .about__container__info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex: 1;
+
+      .about__container__info__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 22% 60px 22% 60px;
+
+
+
+        .about__header1 {
+          @include Allura();
+          color: #ff4646;
+        }
+
+        .about__header2 {
+          @include MontserratHD2();
+          color: black;
+        }
+
+        .about__after__headers {
+          @include Paragraph();
+        }
+      }
+    }
+
+
+    .about__container__img {
+      flex: 1;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+
+  }
+}
+
+.slider {
+  background-color: #ff4646;
+  background-image: url("../assets/images/snow.png");
+  background-size: 100% 100%;
+}
+
+.best__gifts {
+  background-color: #ff4646;
+  background-image: url("../assets/images/snow.png");
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+
+  .gifts__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .header__decorator__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .gifts__decorator {
+        @include Allura();
+        color: white;
+      }
+
+      .gifts__header {
+        @include MontserratHD2();
+        color: white;
+      }
+    }
+
+    .cards__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        background-color: #ECF3F8;
+        border-radius: 20px;
+
+        .border__container {
+          background-color: #ECF3F8;
+          border-radius: 20px;
+
+          .for__content{
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background-color: white;
+            @include MontserratHD4();
+
+            .for__info {
+              @include MontserratHD3();
+            }
+            .for__work__content {
+              color: #4361FF; 
+            }
+
+            .for__health__content {
+              color: #06A44F;
+            }
+
+            .for__harmony__content {
+              color: #FF43F7;
+            }
+          }
+        }
+
+
+        .for__img__container {
+          width: 310px;
+          height: 230px;
+          border-radius: 20px;
+
+          .for__img {
+            width: 100%;
+            height: 100%;
+            background-color: #ECF3F8;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
