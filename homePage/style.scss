@@ -104,6 +104,8 @@ body {
 }
 
 .container {
+  scroll-behavior: smooth;
+  overflow-y: auto;
   width: 1440px;
   display: grid;
   grid-template-columns: 1fr;
@@ -690,18 +692,8 @@ body {
         }
       }
     }
-
     .rights {
       @include Paragraph();
-    }
-
-    .course {
-      @include Allura();
-
-      &:hover {
-        color: #ff4646;
-        cursor: pointer;
-      }
     }
   }
 }
