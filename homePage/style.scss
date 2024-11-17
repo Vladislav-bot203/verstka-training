@@ -543,6 +543,7 @@ body {
 
         .explore__btn__link {
           @include MontserratAS();
+          display: block;
           color: white;
         }
       }
@@ -629,7 +630,27 @@ body {
         gap: 12px;
         background-color: #ecf3f8;
         border-radius: 20px;
-        padding: 20px;
+        
+
+        .cnt1, .cnt2, .cnt3  {
+          transition: color 0.5s ease-in-out;
+        }
+
+        .cont1, .cont2, .cont3 {
+          transition: color 0.5s ease-in-out;
+        }
+
+        .l {
+        color: black;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        height: 100%;
+        margin: 20px;
+      }
 
         .contact__header {
           @include MontserratAL();
@@ -643,28 +664,34 @@ body {
       }
 
       .cnt1:hover {
-        color: #ff4646;
         cursor: pointer;
         .cont1 {
+          color: #ff4646;
+        }
+        .contact__header {
           color: #ff4646;
         }
       }
 
       .cnt2:hover {
-        color: #ff4646;
         cursor: pointer;
         .cont2 {
           color: #ff4646;
           cursor: pointer;
         }
+        .contact__header {
+          color: #ff4646;
+        }
       }
 
       .cnt3:hover {
-        color: #ff4646;
         cursor: pointer;
         .cont3 {
           color: #ff4646;
           cursor: pointer;
+        }
+        .contact__header {
+          color: #ff4646;
         }
       }
     }
@@ -683,6 +710,7 @@ body {
           width: 100%;
           height: 100%;
           padding: 8px;
+          transition: filter 0.5s ease-in-out;
 
           &:hover {
             filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg)
@@ -691,9 +719,23 @@ body {
           }
         }
       }
-    }
-    .rights {
-      @include Paragraph();
+      .rights {
+        @include Paragraph();
+      }
+  
+      .course {
+        @include Allura();
+
+        a {
+          color: black;
+          text-decoration: none;
+          transition: color 0.5s ease-in-out;
+
+          &:hover {
+            color: #ff4646;
+          }
+        }
+      }
     }
   }
 }

@@ -18,6 +18,8 @@ body {
 }
 
 .container {
+  scroll-behavior: smooth;
+  overflow-y: auto;
   width: 1440px;
   display: grid;
   grid-template-columns: 1fr;
@@ -483,6 +485,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+  display: block;
   color: white;
 }
 .cta .cta__container .cta__container__info .timer__container {
@@ -570,7 +573,23 @@ body {
   gap: 12px;
   background-color: #ecf3f8;
   border-radius: 20px;
-  padding: 20px;
+}
+.footer .footer__container .contacts .contacts__info .cnt1, .footer .footer__container .contacts .contacts__info .cnt2, .footer .footer__container .contacts .contacts__info .cnt3 {
+  transition: color 0.5s ease-in-out;
+}
+.footer .footer__container .contacts .contacts__info .cont1, .footer .footer__container .contacts .contacts__info .cont2, .footer .footer__container .contacts .contacts__info .cont3 {
+  transition: color 0.5s ease-in-out;
+}
+.footer .footer__container .contacts .contacts__info .l {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
 }
 .footer .footer__container .contacts .contacts__info .contact__header {
   font-family: "Montserrat";
@@ -591,27 +610,33 @@ body {
   color: black;
 }
 .footer .footer__container .contacts .cnt1:hover {
-  color: #ff4646;
   cursor: pointer;
 }
 .footer .footer__container .contacts .cnt1:hover .cont1 {
   color: #ff4646;
 }
-.footer .footer__container .contacts .cnt2:hover {
+.footer .footer__container .contacts .cnt1:hover .contact__header {
   color: #ff4646;
+}
+.footer .footer__container .contacts .cnt2:hover {
   cursor: pointer;
 }
 .footer .footer__container .contacts .cnt2:hover .cont2 {
   color: #ff4646;
   cursor: pointer;
 }
-.footer .footer__container .contacts .cnt3:hover {
+.footer .footer__container .contacts .cnt2:hover .contact__header {
   color: #ff4646;
+}
+.footer .footer__container .contacts .cnt3:hover {
   cursor: pointer;
 }
 .footer .footer__container .contacts .cnt3:hover .cont3 {
   color: #ff4646;
   cursor: pointer;
+}
+.footer .footer__container .contacts .cnt3:hover .contact__header {
+  color: #ff4646;
 }
 .footer .footer__container .social__media {
   display: flex;
@@ -628,25 +653,30 @@ body {
   width: 100%;
   height: 100%;
   padding: 8px;
+  transition: filter 0.5s ease-in-out;
 }
 .footer .footer__container .social__media .social__icons__container .icon__container:hover {
   filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
   cursor: pointer;
 }
-.footer .footer__container .rights {
+.footer .footer__container .social__media .rights {
   font-family: "Montserrat";
   font-size: 16px;
   font-weight: 400;
   line-height: 148%;
 }
-.footer .footer__container .course {
+.footer .footer__container .social__media .course {
   font-family: "Allura";
   font-size: 24px;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.05em;
 }
-.footer .footer__container .course:hover {
+.footer .footer__container .social__media .course a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+.footer .footer__container .social__media .course a:hover {
   color: #ff4646;
-  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
