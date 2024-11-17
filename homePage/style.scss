@@ -70,9 +70,31 @@
 @mixin MontserratHD3() {
   font-family: "Montserrat";
   font-size: 16px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 152%;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+@mixin ExploreBtn() {
+  padding: 20px 32px;
+  border-radius: 20px;
+  background-color: #181c29;
+  border: transparent;
+}
+
+@mixin MontserratAL() {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@mixin MontserratST() {
+  font-family: "Montserrat";
+  font-size: 80px;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -169,7 +191,7 @@ body {
     }
 
     .top {
-      margin-top: 19%
+      margin-top: 19%;
     }
 
     .hero__container__heading {
@@ -180,10 +202,7 @@ body {
     }
 
     .hero__container__btn {
-      padding: 20px 32px;
-      border-radius: 20px;
-      background-color: #181C29;
-      border: transparent;
+      @include ExploreBtn();
       margin-top: 0.5%;
       margin-bottom: 1%;
 
@@ -211,7 +230,6 @@ body {
   background-image: url(../assets/images/snow.png);
   background-size: 100% 100%;
 
-
   .about__container {
     display: flex;
     flex-direction: row;
@@ -220,20 +238,21 @@ body {
     height: 100%;
     background-color: white;
 
-
     .about__container__info {
       display: flex;
       justify-content: flex-start;
       align-items: stretch;
       flex: 1;
+      padding: 60px;
 
       .about__container__info__text {
         display: flex;
+        width: 426px;
         flex-direction: column;
-        justify-content: space-around;
-        padding: 22% 60px 22% 60px;
-
-
+        gap: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        justify-content: center;
 
         .about__header1 {
           @include Allura();
@@ -251,7 +270,6 @@ body {
       }
     }
 
-
     .about__container__img {
       flex: 1;
 
@@ -261,14 +279,124 @@ body {
         border-radius: 20px;
       }
     }
-
   }
 }
 
 .slider {
+  display: block;
+  overflow: hidden;
   background-color: #ff4646;
   background-image: url("../assets/images/snow.png");
   background-size: 100% 100%;
+  padding: 60px 60px 60px 68px;
+  overflow: hidden;
+
+  .slider__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .happy {
+      @include Allura();
+      color: white;
+    }
+
+    .year__of__happyness {
+      @include MontserratHD2();
+      color: white;
+    }
+
+    .slider__elems {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      gap: 20px;
+
+      .slider__item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+
+        .slider__item__text {
+          @include MontserratST();
+          color: white;
+        }
+
+        .slider__img {
+          width: 200px;
+          height: 200px;
+          border-radius: 20px;
+          background-size: 200px 200px;
+        }
+
+        .img1 {
+          background-image: url("../assets/images/snowman.png");
+        }
+
+        .img2 {
+          background-image: url("../assets/images/christmastrees.png");
+        }
+
+        .img3 {
+          background-image: url("../assets/images/christmastreeball.png");
+        }
+
+        .img4 {
+          background-image: url("../assets/images/fairytail.png");
+        }
+      }
+    }
+
+    .slider__buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      width: 92%;
+
+      .inactive {
+        border: 1px solid rgb(rgb(255, 255, 255), 40%);
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .active {
+        border: 1px solid white;
+      }
+
+      .btn {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        border-radius: 20px;
+
+        &.active:hover {
+          background-color: white;
+
+          .btn__img {
+            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg)
+              brightness(103%) contrast(104%);
+          }
+        }
+
+        .link__btn__img {
+          display: flex;
+          width: 56px;
+          height: 56px;
+          justify-content: center;
+
+          .btn__img {
+            align-self: center;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .best__gifts {
@@ -278,83 +406,301 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 60px;
+  padding: 60px 60px;
 
   .gifts__container {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+    justify-content: space-between;
 
-    .header__decorator__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .gifts__decorator {
+      @include Allura();
+      color: white;
+      align-self: center;
+    }
 
-      .gifts__decorator {
-        @include Allura();
-        color: white;
-      }
-
-      .gifts__header {
-        @include MontserratHD2();
-        color: white;
-      }
+    .gifts__header {
+      @include MontserratHD2();
+      color: white;
+      align-self: center;
     }
 
     .cards__container {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-evenly;
       flex-wrap: wrap;
 
       .card {
         display: flex;
         flex-direction: column;
-        background-color: #ECF3F8;
+        background-color: #ecf3f8;
         border-radius: 20px;
+        width: 310px;
+
+        &:hover {
+          cursor: pointer;
+          .for__info {
+            color: #ff4646;
+          }
+        }
 
         .border__container {
-          background-color: #ECF3F8;
+          background-color: #ecf3f8;
           border-radius: 20px;
+          height: 100%;
 
-          .for__content{
+          .for__content {
             display: flex;
             flex-direction: column;
+            gap: 8px;
             border-radius: 20px;
             background-color: white;
+            height: 100%;
+            padding: 20px;
             @include MontserratHD4();
 
             .for__info {
               @include MontserratHD3();
             }
             .for__work__content {
-              color: #4361FF; 
+              color: #4361ff;
             }
 
             .for__health__content {
-              color: #06A44F;
+              color: #06a44f;
             }
 
             .for__harmony__content {
-              color: #FF43F7;
+              color: #ff43f7;
             }
           }
         }
 
-
         .for__img__container {
-          width: 310px;
+          width: 100%;
           height: 230px;
           border-radius: 20px;
 
           .for__img {
             width: 100%;
             height: 100%;
-            background-color: #ECF3F8;
+            background-color: #ecf3f8;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
           }
         }
+      }
+    }
+  }
+}
+
+.cta {
+  background-color: #ff4646;
+  background-image: url("../assets/images/snow.png"),
+    url("../assets/images/forest.png");
+  background-size: 100% 100%;
+  padding: 60px;
+
+  .cta__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .cta__container__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 426px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      gap: 20px;
+
+      .cta__header {
+        @include MontserratHD2();
+        color: white;
+        text-align: center;
+      }
+
+      .explore__btn {
+        @include ExploreBtn();
+
+        &:hover {
+          background-color: white;
+          cursor: pointer;
+          .explore__btn__link {
+            color: black;
+          }
+        }
+
+        .explore__btn__link {
+          @include MontserratAS();
+          color: white;
+        }
+      }
+
+      .timer__container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .timer__decorator {
+          @include Allura();
+          color: white;
+          text-align: center;
+        }
+
+        .timer {
+          display: flex;
+          padding: 8px 12px 12px 12px;
+          background-color: rgb(rgb(255, 255, 255), 40%);
+          border-radius: 20px;
+        }
+
+        .timer__values {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          width: 80px;
+
+          .timer__values__value {
+            @include MontserratHD2();
+            color: white;
+            text-align: center;
+          }
+
+          .value__type {
+            @include MontserratHD4();
+            color: white;
+            text-align: center;
+          }
+
+          .separator__container {
+            display: flex;
+            flex-direction: row;
+
+            .timer__values__value {
+              flex: 1;
+            }
+
+            .separator {
+              width: 0px;
+              height: 20px;
+              border: 1px solid rgb(rgb(255, 255, 255), 40%);
+              align-self: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: white;
+  padding: 60px;
+
+  .footer__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .contacts {
+      display: flex;
+      width: 100%;
+      justify-content: stretch;
+      gap: 12px;
+
+      .contacts__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        background-color: #ecf3f8;
+        border-radius: 20px;
+        padding: 20px;
+
+        .contact__header {
+          @include MontserratAL();
+        }
+
+        .link__to__contact {
+          @include MontserratHD3();
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      .cnt1:hover {
+        color: #ff4646;
+        cursor: pointer;
+        .cont1 {
+          color: #ff4646;
+        }
+      }
+
+      .cnt2:hover {
+        color: #ff4646;
+        cursor: pointer;
+        .cont2 {
+          color: #ff4646;
+          cursor: pointer;
+        }
+      }
+
+      .cnt3:hover {
+        color: #ff4646;
+        cursor: pointer;
+        .cont3 {
+          color: #ff4646;
+          cursor: pointer;
+        }
+      }
+    }
+    .social__media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+
+      .social__icons__container {
+        display: flex;
+        gap: 12px;
+
+        .icon__container {
+          width: 100%;
+          height: 100%;
+          padding: 8px;
+
+          &:hover {
+            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg)
+              brightness(103%) contrast(104%);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .rights {
+      @include Paragraph();
+    }
+
+    .course {
+      @include Allura();
+
+      &:hover {
+        color: #ff4646;
+        cursor: pointer;
       }
     }
   }

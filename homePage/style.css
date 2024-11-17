@@ -127,7 +127,7 @@ body {
 .hero__container .hero__container__info .hero__container__btn {
   padding: 20px 32px;
   border-radius: 20px;
-  background-color: #181C29;
+  background-color: #181c29;
   border: transparent;
   margin-top: 0.5%;
   margin-bottom: 1%;
@@ -171,12 +171,16 @@ body {
   justify-content: flex-start;
   align-items: stretch;
   flex: 1;
+  padding: 60px;
 }
 .about .about__container .about__container__info .about__container__info__text {
   display: flex;
+  width: 426px;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 22% 60px 22% 60px;
+  gap: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  justify-content: center;
 }
 .about .about__container .about__container__info .about__container__info__text .about__header1 {
   font-family: "Allura";
@@ -211,9 +215,112 @@ body {
 }
 
 .slider {
+  display: block;
+  overflow: hidden;
   background-color: #ff4646;
   background-image: url("../assets/images/snow.png");
   background-size: 100% 100%;
+  padding: 60px 60px 60px 68px;
+  overflow: hidden;
+}
+.slider .slider__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.slider .slider__container .happy {
+  font-family: "Allura";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: white;
+}
+.slider .slider__container .year__of__happyness {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+}
+.slider .slider__container .slider__elems {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+}
+.slider .slider__container .slider__elems .slider__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.slider .slider__container .slider__elems .slider__item .slider__item__text {
+  font-family: "Montserrat";
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+}
+.slider .slider__container .slider__elems .slider__item .slider__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background-size: 200px 200px;
+}
+.slider .slider__container .slider__elems .slider__item .img1 {
+  background-image: url("../assets/images/snowman.png");
+}
+.slider .slider__container .slider__elems .slider__item .img2 {
+  background-image: url("../assets/images/christmastrees.png");
+}
+.slider .slider__container .slider__elems .slider__item .img3 {
+  background-image: url("../assets/images/christmastreeball.png");
+}
+.slider .slider__container .slider__elems .slider__item .img4 {
+  background-image: url("../assets/images/fairytail.png");
+}
+.slider .slider__container .slider__buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  width: 92%;
+}
+.slider .slider__container .slider__buttons .inactive {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  cursor: default;
+}
+.slider .slider__container .slider__buttons .active {
+  border: 1px solid white;
+}
+.slider .slider__container .slider__buttons .btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  border-radius: 20px;
+}
+.slider .slider__container .slider__buttons .btn.active:hover {
+  background-color: white;
+}
+.slider .slider__container .slider__buttons .btn.active:hover .btn__img {
+  filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
+}
+.slider .slider__container .slider__buttons .btn .link__btn__img {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+}
+.slider .slider__container .slider__buttons .btn .link__btn__img .btn__img {
+  align-self: center;
+  width: 24px;
+  height: 24px;
 }
 
 .best__gifts {
@@ -223,27 +330,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 60px;
+  padding: 60px 60px;
 }
 .best__gifts .gifts__container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  justify-content: space-between;
 }
-.best__gifts .gifts__container .header__decorator__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.best__gifts .gifts__container .header__decorator__container .gifts__decorator {
+.best__gifts .gifts__container .gifts__decorator {
   font-family: "Allura";
   font-size: 24px;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.05em;
   color: white;
+  align-self: center;
 }
-.best__gifts .gifts__container .header__decorator__container .gifts__header {
+.best__gifts .gifts__container .gifts__header {
   font-family: "Montserrat";
   font-size: 24px;
   font-weight: 600;
@@ -251,28 +356,40 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: white;
+  align-self: center;
 }
 .best__gifts .gifts__container .cards__container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .best__gifts .gifts__container .cards__container .card {
   display: flex;
   flex-direction: column;
-  background-color: #ECF3F8;
+  background-color: #ecf3f8;
   border-radius: 20px;
+  width: 310px;
+}
+.best__gifts .gifts__container .cards__container .card:hover {
+  cursor: pointer;
+}
+.best__gifts .gifts__container .cards__container .card:hover .for__info {
+  color: #ff4646;
 }
 .best__gifts .gifts__container .cards__container .card .border__container {
-  background-color: #ECF3F8;
+  background-color: #ecf3f8;
   border-radius: 20px;
+  height: 100%;
 }
 .best__gifts .gifts__container .cards__container .card .border__container .for__content {
   display: flex;
   flex-direction: column;
+  gap: 8px;
   border-radius: 20px;
   background-color: white;
+  height: 100%;
+  padding: 20px;
   font-family: "Montserrat";
   font-size: 12px;
   font-weight: 600;
@@ -283,29 +400,253 @@ body {
 .best__gifts .gifts__container .cards__container .card .border__container .for__content .for__info {
   font-family: "Montserrat";
   font-size: 16px;
-  font-weight: 600px;
+  font-weight: 600;
   line-height: 152%;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .best__gifts .gifts__container .cards__container .card .border__container .for__content .for__work__content {
-  color: #4361FF;
+  color: #4361ff;
 }
 .best__gifts .gifts__container .cards__container .card .border__container .for__content .for__health__content {
-  color: #06A44F;
+  color: #06a44f;
 }
 .best__gifts .gifts__container .cards__container .card .border__container .for__content .for__harmony__content {
-  color: #FF43F7;
+  color: #ff43f7;
 }
 .best__gifts .gifts__container .cards__container .card .for__img__container {
-  width: 310px;
+  width: 100%;
   height: 230px;
   border-radius: 20px;
 }
 .best__gifts .gifts__container .cards__container .card .for__img__container .for__img {
   width: 100%;
   height: 100%;
-  background-color: #ECF3F8;
+  background-color: #ecf3f8;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.cta {
+  background-color: #ff4646;
+  background-image: url("../assets/images/snow.png"), url("../assets/images/forest.png");
+  background-size: 100% 100%;
+  padding: 60px;
+}
+.cta .cta__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.cta .cta__container .cta__container__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 426px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 20px;
+}
+.cta .cta__container .cta__container__info .cta__header {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.cta .cta__container .cta__container__info .explore__btn {
+  padding: 20px 32px;
+  border-radius: 20px;
+  background-color: #181c29;
+  border: transparent;
+}
+.cta .cta__container .cta__container__info .explore__btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.cta .cta__container .cta__container__info .explore__btn:hover .explore__btn__link {
+  color: black;
+}
+.cta .cta__container .cta__container__info .explore__btn .explore__btn__link {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  color: white;
+}
+.cta .cta__container .cta__container__info .timer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__decorator {
+  font-family: "Allura";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  color: white;
+  text-align: center;
+}
+.cta .cta__container .cta__container__info .timer__container .timer {
+  display: flex;
+  padding: 8px 12px 12px 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 80px;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values .timer__values__value {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values .value__type {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values .separator__container {
+  display: flex;
+  flex-direction: row;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values .separator__container .timer__values__value {
+  flex: 1;
+}
+.cta .cta__container .cta__container__info .timer__container .timer__values .separator__container .separator {
+  width: 0px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  align-self: flex-end;
+}
+
+.footer {
+  background-color: white;
+  padding: 60px;
+}
+.footer .footer__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.footer .footer__container .contacts {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  gap: 12px;
+}
+.footer .footer__container .contacts .contacts__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #ecf3f8;
+  border-radius: 20px;
+  padding: 20px;
+}
+.footer .footer__container .contacts .contacts__info .contact__header {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.footer .footer__container .contacts .contacts__info .link__to__contact {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+.footer .footer__container .contacts .cnt1:hover {
+  color: #ff4646;
+  cursor: pointer;
+}
+.footer .footer__container .contacts .cnt1:hover .cont1 {
+  color: #ff4646;
+}
+.footer .footer__container .contacts .cnt2:hover {
+  color: #ff4646;
+  cursor: pointer;
+}
+.footer .footer__container .contacts .cnt2:hover .cont2 {
+  color: #ff4646;
+  cursor: pointer;
+}
+.footer .footer__container .contacts .cnt3:hover {
+  color: #ff4646;
+  cursor: pointer;
+}
+.footer .footer__container .contacts .cnt3:hover .cont3 {
+  color: #ff4646;
+  cursor: pointer;
+}
+.footer .footer__container .social__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.footer .footer__container .social__media .social__icons__container {
+  display: flex;
+  gap: 12px;
+}
+.footer .footer__container .social__media .social__icons__container .icon__container {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+.footer .footer__container .social__media .social__icons__container .icon__container:hover {
+  filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
+  cursor: pointer;
+}
+.footer .footer__container .rights {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 148%;
+}
+.footer .footer__container .course {
+  font-family: "Allura";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+.footer .footer__container .course:hover {
+  color: #ff4646;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

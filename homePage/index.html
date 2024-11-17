@@ -1,113 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css" />
-</head>
-
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="header__logo">
-        <img src="../assets/images/snowflake.png" />
-        <p class="header__logo__link"><a href="#">THE GIFTS</a></p>
-      </div>
-      <nav class="header__nav">
-        <button class="btn"><a class="header__link" href="#">gifts</a></button>
-        <button class="btn"><a class="header__link" href="#">about</a></button>
-        <button class="btn"><a class="header__link" href="#">best</a></button>
-        <button class="btn"><a class="header__link" href="#">contacts</a></button>
-      </nav>
-    </header>
-    <section class="hero__container">
-      <div class="hero__container__info">
-        <p class="hero__container__wishes top">Merry Christmas</p>
-        <p class="hero__container__heading">gift yourself the magic of new possibilities</p>
-        <button class="hero__container__btn"><a class="hero__container__link">explore magical gifts</a></button>
-        <p class="hero__container__wishes bottom">and Happy New year</p>
-      </div>
-    </section>
-    <section class="about">
-      <div class="about__container">
-        <div class="about__container__info">
-          <div class="about__container__info__text">
-            <p class="about__header1">About</p>
-            <p class="about__header2">unleash your inner superhero!</p>
-            <p class="about__after__headers">This New Year marks the beginning of your journey to inner harmony and new
-              strengths. We offer unique gifts that will help you improve your life.</p>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <img src="../assets/images/snowflake.png" />
+          <p class="header__logo__link"><a href="#">THE GIFTS</a></p>
+        </div>
+        <nav class="header__nav">
+          <button class="btn">
+            <a class="header__link" href="#">gifts</a>
+          </button>
+          <button class="btn">
+            <a class="header__link" href="#">about</a>
+          </button>
+          <button class="btn"><a class="header__link" href="#">best</a></button>
+          <button class="btn">
+            <a class="header__link" href="#">contacts</a>
+          </button>
+        </nav>
+      </header>
+      <section class="hero__container">
+        <div class="hero__container__info">
+          <p class="hero__container__wishes top">Merry Christmas</p>
+          <p class="hero__container__heading">
+            gift yourself the magic of new possibilities
+          </p>
+          <button class="hero__container__btn">
+            <a class="hero__container__link">explore magical gifts</a>
+          </button>
+          <p class="hero__container__wishes bottom">and Happy New year</p>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <div class="about__container__info">
+            <div class="about__container__info__text">
+              <p class="about__header1">About</p>
+              <p class="about__header2">unleash your inner superhero!</p>
+              <p class="about__after__headers">
+                This New Year marks the beginning of your journey to inner
+                harmony and new strengths. We offer unique gifts that will help
+                you improve your life.
+              </p>
+            </div>
+          </div>
+          <div class="about__container__img">
+            <img class="img" src="../assets/images/Santa.png" />
           </div>
         </div>
-        <div class="about__container__img"><img class="img" src="../assets/images/Santa.png" /></div>
-      </div>
-    </section>
-    <section class="slider">
-
-    </section>
-    <section class="best__gifts">
-      <div class="gifts__container">
-        <div class="header__decorator__container">
+      </section>
+      <section class="slider">
+        <div class="slider__container">
+          <p class="happy">Become Happier!</p>
+          <p class="year__of__happyness">in the new 2025</p>
+          <div class="slider__elems">
+            <div class="slider__item">
+              <p class="slider__item__text">live</p>
+              <div class="slider__img img1"></div>
+            </div>
+            <div class="slider__item">
+              <p class="slider__item__text">create</p>
+              <div class="slider__img img2"></div>
+            </div>
+            <div class="slider__item">
+              <p class="slider__item__text">love</p>
+              <div class="slider__img img3"></div>
+            </div>
+            <div class="slider__item">
+              <p class="slider__item__text">dream</p>
+              <div class="slider__img img4"></div>
+            </div>
+          </div>
+          <div class="slider__buttons">
+            <div class="btn inactive">
+              <a class="link__btn__img" href="#"
+                ><img
+                  class="btn__img"
+                  src="../assets/images/arrow-left.svg"
+                  alt="arrow-left"
+              /></a>
+            </div>
+            <div class="btn active">
+              <a class="link__btn__img" href="#"
+                ><img
+                  class="btn__img"
+                  src="../assets/images/arrow-right.svg"
+                  alt="arrow-right"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="best__gifts">
+        <div class="gifts__container">
           <p class="gifts__decorator">Best Gifts</p>
           <p class="gifts__header">especially for you</p>
+          <div class="cards__container">
+            <div class="card">
+              <div class="for__img__container">
+                <img
+                  class="for__img for work"
+                  src="../assets/images/forWork.png"
+                />
+              </div>
+              <div class="border__container">
+                <div class="for__content">
+                  <p class="for__work__content">for work</p>
+                  <p class="for__info">CONSOLE.LOG GURU</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="for__img__container">
+                <img
+                  class="for__img for health"
+                  src="../assets/images/forHealth.png"
+                />
+              </div>
+              <div class="border__container">
+                <div class="for__content">
+                  <p class="for__health__content">for health</p>
+                  <p class="for__info">hydration bot</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="for__img__container">
+                <img
+                  class="for__img for__work"
+                  src="../assets/images/forWork.png"
+                />
+              </div>
+              <div class="border__container">
+                <div class="for__content">
+                  <p class="for__work__content">for work</p>
+                  <p class="for__info">merge master</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="for__img__container">
+                <img
+                  class="for__img for__harmony"
+                  src="../assets/images/forHarmony.png"
+                />
+              </div>
+              <div class="border__container">
+                <div class="for__content">
+                  <p class="for__harmony__content">for harmony</p>
+                  <p class="for__info">spontaneous coding philosopher</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cards__container">
-          <div class="card">
-            <div class="for__img__container">
-              <img class="for__img for work" src="../assets/images/forWork.png" />
-            </div>
-            <div class="border__container">
-              <div class="for__content">
-                <p class="for__work__content">for work</p>
-                <p class="for__info">CONSOLE.LOG GURU</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="for__img__container">
-              <img class="for__img for health" src="../assets/images/forHealth.png" />
-            </div>
-            <div class="border__container">
-              <div class="for__content">
-                <p class="for__health__content">for health</p>
-                <p class="for__info">hydration bot</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="for__img__container">
-              <img class="for__img for__work" src="../assets/images/forWork.png" />
-            </div>
-            <div class="border__container">
-              <div class="for__content">
-                <p class="for__work__content">for work</p>
-                <p class="for__info">merge master</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="for__img__container">
-              <img class="for__img for__harmony" src="../assets/images/forHarmony.png" />
-            </div>
-            <div class="border__container">
-              <div class="for__content">
-                <p class="for__harmony__content">for harmony</p>
-                <p class="for__info">spontaneous coding philosopher</p>
+      </section>
+      <section class="cta">
+        <div class="cta__container">
+          <div class="cta__container__info">
+            <p class="cta__header">
+              Ready to start your journey to a better version of yourself?
+            </p>
+            <button class="explore__btn">
+              <a class="explore__btn__link">explore magical gifts</a>
+            </button>
+            <div class="timer__container">
+              <p class="timer__decorator">The New Year is Coming Soon...</p>
+              <div class="timer">
+                <div class="timer__values">
+                  <p class="timer__values__value">47</p>
+                  <p class="value__type">days</p>
+                </div>
+                <div class="timer__values">
+                  <div class="separator__container">
+                    <p class="separator"></p>
+                    <p class="timer__values__value">5</p>
+                    <p class="separator"></p>
+                  </div>
+                  <p class="value__type">hours</p>
+                </div>
+                <div class="timer__values">
+                  <div class="separator__container">
+                    <p class="timer__values__value">34</p>
+                    <p class="separator"></p>
+                  </div>
+                  <p class="value__type">minutes</p>
+                </div>
+                <div class="timer__values">
+                  <p class="timer__values__value">12</p>
+                  <p class="value__type">seconds</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="CTA">
-
-    </section>
-    <footer>
-
-    </footer>
-  </div>
-</body>
-
+      </section>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="contacts">
+            <div class="contacts__info cnt1">
+              <div class="contacts__img__container">
+                <img src="../assets/images/santa-claus.png" />
+              </div>
+              <p class="contact__header cnt1">+375 (29) 111-22-33</p>
+              <a class="link__to__contact cont1" href="tel:+375291112233"
+                >call us</a
+              >
+            </div>
+            <div class="contacts__info cnt2">
+              <div class="contacts__img__container">
+                <img src="../assets/images/christmas-tree.png" />
+              </div>
+              <p class="contact__header">magic forest</p>
+              <a class="link__to__contact cont2" href="tel:+375291112233"
+                >meet us</a
+              >
+            </div>
+            <div class="contacts__info cnt3">
+              <div class="contacts__img__container">
+                <img src="../assets/images/snake.png" />
+              </div>
+              <p class="contact__header">gifts@magic.com</p>
+              <a class="link__to__contact cont3" href="tel:+375291112233"
+                >write us</a
+              >
+            </div>
+          </div>
+          <div class="social__media">
+            <div class="social__icons__container">
+              <div class="icon__container">
+                <a class="telegram__link" href="#"
+                  ><img
+                    class="telegram__link__img"
+                    src="../assets/images/telegram.svg"
+                    alt="telegram"
+                /></a>
+              </div>
+              <div class="icon__container">
+                <a class="facebook__link" href="#"
+                  ><img src="../assets/images/facebook.svg" alt="facebook"
+                /></a>
+              </div>
+              <div class="icon__container">
+                <a class="instagram__link" href="#"
+                  ><img src="../assets/images/instagram.svg" alt="instagram"
+                /></a>
+              </div>
+              <div class="icon__container">
+                <a class="x__link" href="#"
+                  ><img src="../assets/images/X.svg" alt="x"
+                /></a>
+              </div>
+            </div>
+            <p class="rights">© Copyright 2025, All Rights Reserved</p>
+            <p class="course">Made in Rolling Scopes School</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
