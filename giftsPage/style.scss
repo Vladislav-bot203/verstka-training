@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+@font-face {
+    font-family: "Allura";
+    src: url("../assets/fonts/Allura-Regular.ttf");
+  }
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat-Regular.ttf");
+  }
+
+@mixin MontserratAS() {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+
+  @mixin MontserratHD1() {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  @mixin MontserratAL() {
+    font-family: "Montserrat";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 152%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  @mixin MontserratHD3() {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 152%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  @mixin Paragraph() {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 148%;
+  }
+
+  @mixin Allura() {
+    font-family: "Allura";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+  }
+
+  @mixin MontserratHD4() {
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+.container {
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 64px 1394px 496px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 5.5%;
+  
+    .header__logo {
+      display: flex;
+      align-items: center;
+      padding: 8px 20px;
+      text-decoration: none;
+      color: black;
+  
+      &:hover,
+      &:hover .header__logo__link {
+        cursor: pointer;
+      }
+  
+      .header__logo__link {
+        @include MontserratAS();
+        margin-left: 8px;
+  
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  
+    .header__nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  
+      .btn {
+        margin-left: 8px;
+        padding: 12px 20px;
+        border: 0px;
+        border-radius: 10px;
+        @include MontserratAS();
+        text-decoration: none;
+        transition: color 0.4s ease-in-out;
+        transition: background-color 0.4s ease-in-out;
+  
+        &:hover {
+          background-color: #ffeded;
+          color: #ff4646;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+.gifts {
+    background-color: #ff4646;
+    border-radius: 20px;
+    background-image: url("../assets/images/garland.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 8px;
+
+    .gifts__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+
+        .gifts__header {
+            @include MontserratHD1();
+            display: flex;
+            width: 426px;
+            gap: 12px;
+            text-align: center;
+            color: white;
+        }
+    
+        .gifts__navigation {
+            display: flex;
+            gap: 8px;
+    
+            .gifts__link {
+                @include MontserratAS();
+                padding: 12px 20px 12px 20px;
+                text-decoration: none;
+                color: white;
+                border-radius: 12px;
+    
+                &:hover {
+                    background-color: #FB6D6D;
+                }
+            }
+        }
+
+        .cards__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+      
+            .card {
+              display: flex;
+              flex-direction: column;
+              background-color: #ecf3f8;
+              border-radius: 20px;
+              width: 310px;
+      
+              &:hover {
+                cursor: pointer;
+      
+                .for__info {
+                  color: #ff4646;
+                }
+              }
+      
+              .border__container {
+                background-color: #ecf3f8;
+                border-radius: 20px;
+                height: 100%;
+      
+                .for__content {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  border-radius: 20px;
+                  background-color: white;
+                  height: 100%;
+                  padding: 20px;
+                  @include MontserratHD4();
+      
+                  .for__info {
+                    @include MontserratHD3();
+                    transition: color 0.3s ease-in-out;
+                  }
+      
+                  .for__work__content {
+                    color: #4361ff;
+                  }
+      
+                  .for__health__content {
+                    color: #06a44f;
+                  }
+      
+                  .for__harmony__content {
+                    color: #ff43f7;
+                  }
+                }
+              }
+      
+              .for__img__container {
+                width: 100%;
+                height: 230px;
+                border-radius: 20px;
+      
+                .for__img {
+                  width: 100%;
+                  height: 100%;
+                  background-color: #ecf3f8;
+                  border-top-left-radius: 20px;
+                  border-top-right-radius: 20px;
+                }
+              }
+            }
+          }
+    }
+}
+
+.footer {
+    background-color: white;
+    padding: 60px;
+  
+    .footer__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+  
+      .contacts {
+        display: flex;
+        width: 100%;
+        justify-content: stretch;
+        gap: 12px;
+  
+        .contacts__info {
+          display: block;
+          flex: 1;
+          background-color: #ecf3f8;
+          border-radius: 20px;
+          color: black;
+          text-decoration: none;
+  
+          .contacts__info__container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 12px;
+            border-radius: 20px;
+  
+            .contact__header {
+              @include MontserratAL();
+              transition: color 0.4s ease-in-out;
+            }
+  
+            .link__to__contact {
+              @include MontserratHD3();
+              text-decoration: none;
+              transition: color 0.4s ease-in-out;
+            }
+          }
+  
+         &.l1:hover, &.l2:hover, &.l3:hover {
+          cursor: pointer;
+  
+          .contact__header {
+            color: #ff4646;
+          }
+  
+          .link__to__contact {
+            color: #ff4646;
+          }
+         }
+        }
+      }
+  
+      .social__media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+  
+        .social__icons__container {
+          display: flex;
+          gap: 12px;
+  
+          .icon__container {
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+            transition: filter 0.4s ease-in-out;
+  
+            &:hover {
+              filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
+              cursor: pointer;
+            }
+          }
+        }
+  
+        .rights {
+          @include Paragraph();
+        }
+  
+        .course {
+          @include Allura();
+  
+          a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.4s ease-in-out;
+  
+            &:hover {
+              color: #ff4646;
+            }
+          }
+        }
+      }
+    }
+  }
+
