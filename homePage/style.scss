@@ -75,6 +75,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
 @mixin ExploreBtn() {
   padding: 20px 32px;
   border-radius: 20px;
@@ -123,6 +124,8 @@ body {
     display: flex;
     align-items: center;
     padding: 8px 20px;
+    text-decoration: none;
+    color: black;
 
     &:hover,
     &:hover .header__logo__link {
@@ -149,16 +152,13 @@ body {
       margin-left: 8px;
       padding: 12px 20px;
       border: 0px;
-      background-color: transparent;
       border-radius: 10px;
+      @include MontserratAS();
+      text-decoration: none;
+      transition: color 0.4s ease-in-out;
+      transition: background-color 0.4s ease-in-out;
 
-      .header__link {
-        @include MontserratAS();
-        text-decoration: none;
-      }
-
-      &:hover,
-      &:hover .header__link {
+      &:hover {
         background-color: #ffeded;
         color: #ff4646;
         cursor: pointer;
@@ -205,19 +205,18 @@ body {
 
     .hero__container__btn {
       @include ExploreBtn();
+      @include MontserratAS();
       margin-top: 0.5%;
       margin-bottom: 1%;
+      color: white;
+      text-decoration: none;
+      transition: color 0.4s ease-in-out;
+      transition: background-color 0.4s ease-in-out;
 
-      &:hover,
-      &:hover .hero__container__link {
+      &:hover {
         background-color: white;
         color: black;
         cursor: pointer;
-      }
-
-      .hero__container__link {
-        @include MontserratAS();
-        color: white;
       }
     }
   }
@@ -367,6 +366,8 @@ body {
 
       .active {
         border: 1px solid white;
+        transition: color 0.4s ease-in-out;
+        transition: background-color 0.4s ease-in-out;
       }
 
       .btn {
@@ -379,8 +380,7 @@ body {
           background-color: white;
 
           .btn__img {
-            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg)
-              brightness(103%) contrast(104%);
+            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
           }
         }
 
@@ -444,6 +444,7 @@ body {
 
         &:hover {
           cursor: pointer;
+
           .for__info {
             color: #ff4646;
           }
@@ -466,7 +467,9 @@ body {
 
             .for__info {
               @include MontserratHD3();
+              transition: color 0.3s ease-in-out;
             }
+
             .for__work__content {
               color: #4361ff;
             }
@@ -505,6 +508,8 @@ body {
     url("../assets/images/forest.png");
   background-size: 100% 100%;
   padding: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   .cta__container {
     width: 100%;
@@ -532,20 +537,18 @@ body {
 
       .explore__btn {
         @include ExploreBtn();
+        @include MontserratAS();
+        text-decoration: none;
+        color: white;
+        transition: color 0.4s ease-in-out;
+        transition: background-color 0.4s ease-in-out;
 
         &:hover {
           background-color: white;
           cursor: pointer;
-          .explore__btn__link {
-            color: black;
-          }
+          color: black;
         }
 
-        .explore__btn__link {
-          @include MontserratAS();
-          display: block;
-          color: white;
-        }
       }
 
       .timer__container {
@@ -623,78 +626,49 @@ body {
       gap: 12px;
 
       .contacts__info {
+        display: block;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
         background-color: #ecf3f8;
         border-radius: 20px;
-        
-
-        .cnt1, .cnt2, .cnt3  {
-          transition: color 0.5s ease-in-out;
-        }
-
-        .cont1, .cont2, .cont3 {
-          transition: color 0.5s ease-in-out;
-        }
-
-        .l {
         color: black;
         text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        height: 100%;
-        margin: 20px;
-      }
+
+        .contacts__info__container {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+          gap: 12px;
+          border-radius: 20px;
+
+          .contact__header {
+            @include MontserratAL();
+            transition: color 0.4s ease-in-out;
+          }
+
+          .link__to__contact {
+            @include MontserratHD3();
+            text-decoration: none;
+            transition: color 0.4s ease-in-out;
+          }
+        }
+
+       &.l1:hover, &.l2:hover, &.l3:hover {
+        cursor: pointer;
 
         .contact__header {
-          @include MontserratAL();
+          color: #ff4646;
         }
 
         .link__to__contact {
-          @include MontserratHD3();
-          text-decoration: none;
-          color: black;
-        }
-      }
-
-      .cnt1:hover {
-        cursor: pointer;
-        .cont1 {
           color: #ff4646;
         }
-        .contact__header {
-          color: #ff4646;
-        }
-      }
-
-      .cnt2:hover {
-        cursor: pointer;
-        .cont2 {
-          color: #ff4646;
-          cursor: pointer;
-        }
-        .contact__header {
-          color: #ff4646;
-        }
-      }
-
-      .cnt3:hover {
-        cursor: pointer;
-        .cont3 {
-          color: #ff4646;
-          cursor: pointer;
-        }
-        .contact__header {
-          color: #ff4646;
-        }
+       }
       }
     }
+
     .social__media {
       display: flex;
       flex-direction: column;
@@ -710,26 +684,26 @@ body {
           width: 100%;
           height: 100%;
           padding: 8px;
-          transition: filter 0.5s ease-in-out;
+          transition: filter 0.4s ease-in-out;
 
           &:hover {
-            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg)
-              brightness(103%) contrast(104%);
+            filter: invert(43%) sepia(12%) saturate(4473%) hue-rotate(323deg) brightness(103%) contrast(104%);
             cursor: pointer;
           }
         }
       }
+
       .rights {
         @include Paragraph();
       }
-  
+
       .course {
         @include Allura();
 
         a {
           color: black;
           text-decoration: none;
-          transition: color 0.5s ease-in-out;
+          transition: color 0.4s ease-in-out;
 
           &:hover {
             color: #ff4646;
